@@ -1,0 +1,33 @@
+version: '3'
+services:
+  swagger-ui:
+    container_name: swagger-ui
+    restart: always
+    image: swaggerapi/swagger-ui
+    environment:
+      SWAGGER_JSON: "/app/swagger.json"
+      #API_URL: "http://crm.1-diantong.cn"
+    ports: 
+      - '8999:8080'
+    volumes:
+      - swagger:/app:rw 
+    networks: 
+      - swagger-net 
+  swagger-editor:
+    container_name: swagger-editor
+    restart: always
+    image: swaggerapi/swagger-editor
+    ports: 
+      - '8998:8080'
+    networks: 
+      - swagger-net 
+networks:
+  swagger-net:
+    driver: bridge
+volumes:
+  swagger:
+    driver: local
+    driver_opts:
+      type: bind
+      o: bind
+      device: ${PWD}/data
