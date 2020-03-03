@@ -6,7 +6,6 @@ services:
     image: swaggerapi/swagger-ui
     environment:
       SWAGGER_JSON: "/app/swagger.json"
-      #API_URL: "http://crm.1-diantong.cn"
     ports: 
       - '8999:8080'
     volumes:
