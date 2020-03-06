@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "易点通CRM-API文档",
+    "description": "pet文档",
     "version": "1.0.0",
-    "title": "易点通CRM",
+    "title": "pet",
     "termsOfService": "http://crm.1-diantong.cn/",
     "contact": {
       "email": "bonzaphp@gmail.com"
@@ -13,7 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "crm.1-diantong.cn",
+  "host": "test.cn",
   "basePath": "/api/v1",
   "tags": [
     {
